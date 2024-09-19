@@ -1,9 +1,9 @@
 html {
-    background-color: green;
+    background-color: rgb(29, 185, 112);
     font-size: 20px;
   }
   ul {
-    background: red;
+    background: rgb(104, 33, 33);
     padding: 10px;
     border: 1px solid black;
   }

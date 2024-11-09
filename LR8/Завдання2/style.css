@@ -1,0 +1,167 @@
+/* General setup */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+  }
+  
+  /* Layout */
+  
+  section {
+    float: left;
+    width: 50%;
+  }
+  
+  aside {
+    float: left;
+    width: 30%;
+  }
+  
+  nav {
+    float: left;
+    width: 20%;
+  }
+  
+  footer {
+    clear: both;
+  }
+  
+  header, section, aside, nav, footer {
+    padding: 20px;
+  }
+  
+  /* header and footer */
+  
+  header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+  }
+  @font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/MyCustomFont.woff2') format('woff2'),
+         url('fonts/MyCustomFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+	@font-face {
+    font-family: 'OtherFont';
+    src: url('fonts/OtherFont.woff2') format('woff2'),
+         url('fonts/OtherFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+
+body {
+    font-family: 'SerifFont', serif;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    font-family: 'SansSerifFont', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    letter-spacing: 0.5px;
+}
+
+ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    line-height: 1.5;
+    list-style: url('external-link-52.png');
+}
+
+nav {
+    background: #333;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: underline;
+}
+
+nav a:visited {
+    color: #ccc;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: none;
+}
+
+nav a:focus {
+    outline: none;
+}
+
+nav a.active {
+    color: yellow; /* Яскравий стиль для активного стану */
+}
+
+/* Ваші доповнення CSS починаються тут */
+
+body {
+    background-color: #f8f8f8; /* Додано фоновий колір */
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.5em; /* Заголовок другого рівня */
+}
+
+p {
+    margin-bottom: 20px;
+    word-spacing: 1px; /* Додано відстань між словами */
+}
+
+ul {
+    padding-left: 20px; /* Відступ для списків */
+}
+
+nav ul li {
+    margin-right: 30px; /* Відстань між пунктами меню */
+}
+
+/* Стилі для зовнішніх посилань */
+.external-link {
+    background-image: url('external-link-52.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px; /* Відступ для маркера */
+}
+  

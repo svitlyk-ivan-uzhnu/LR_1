@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туристичний каталог </title>
+    <link rel="stylesheet" href="style.css"> <!-- Підключення файлу стилів CSS -->
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Туристичний каталог "Подорож"</h1> <!-- Заголовок сторінки -->
+        </header>
+        <section class="filters">
+            <input type="text" id="search" placeholder="Пошук за назвою"> <!-- Поле для пошуку напрямків за назвою -->
+            <select id="category-filter">
+                <option value="">Всі категорії</option>
+                <option value="Місто">Місто</option>
+                <option value="Природа">Природа</option>
+                <option value="Історія">Історія</option>
+                <option value="Культура">Культура</option>
+                <option value="Курорт">Курорт</option>
+            </select> <!-- Випадаючий список для фільтрації за категорією -->
+            <select id="country-filter">
+                <option value="">Всі країни</option>
+            </select> <!-- Випадаючий список для фільтрації за країною -->
+            <input type="number" id="rating-filter" min="1" max="5" placeholder="Мінімальний рейтинг"> <!-- Поле для фільтрації за мінімальним рейтингом -->
+            <select id="sort-options">
+                <option value="name-asc">Назва (А-Я)</option>
+                <option value="name-desc">Назва (Я-А)</option>
+                <option value="rating-asc">Рейтинг (зростання)</option>
+                <option value="rating-desc">Рейтинг (спадання)</option>
+            </select> <!-- Випадаючий список для сортування напрямків -->
+        </section>
+        <section class="destinations-grid" id="destinations-grid">
+        </section>
+        <p id="error-message" class="message" style="display: none;">Не вдалося завантажити дані.</p> <!-- Повідомлення про помилку завантаження даних -->
+        <p id="none-message" class="message" style="display: none;">Нічого не знайдено</p> <!-- Повідомлення про відсутність результатів -->
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span> <!-- Кнопка закриття модального вікна -->
+            <div id="modal-body">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Автор: Світлик Іван</p> 
+        <span>Номер телефону: +380112233456</span>
+    </footer>
+    <script src="main.js"></script> <!-- Підключення файлу JavaScript -->
+</body>
+</html>

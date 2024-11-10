@@ -1,0 +1,155 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: url('background.jpeg') no-repeat center center fixed; /* Фонова картинка */
+    background-size: cover; /* Розтягує фон на всю сторінку */
+}
+
+h1 {
+    padding: 15px;
+    margin: 0px;
+}
+
+header {
+    background-color: #4caf4fa0; /* Напівпрозорий зелений фон для шапки */
+    color: white;
+    text-align: center;
+}
+
+.filters {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    padding: 1em; /* Додає відступи навколо фільтрів */
+    background-color: #f1f1f1c8; 
+}
+
+.filters input, .filters select {
+    padding: 0.5em;
+    font-size: 1em; /* Встановлює розмір шрифту */
+    margin: 0.5em; /* Додає відступи між елементами */
+    flex: 1 1 200px; 
+}
+
+.destinations-grid {
+    display: grid; /* Використовуємо CSS Grid для розташування елементів */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    padding: 1em; 
+}
+
+.card {
+    background-color: white; /* Встановлює білий фон для карток */
+    border: 3px solid #ff6201; 
+    border-radius: 25px; 
+    padding: 1em; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Додає тінь для карток */
+    transition: transform 0.2s; 
+    margin: 7px;
+    opacity: 0.8;
+
+}
+
+.card:hover {
+    transform: scale(1.05); /* Збільшує картку при наведенні */
+    cursor: pointer; /* Змінює курсор на вказівник при наведенні */
+    opacity: 1;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.rating {
+    color: gold; /* Колір зірок */
+    font-size: 1.2em; 
+}
+
+.modal {
+    display: none; /* Приховуємо модальне вікно за замовчуванням */
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe; /* Білий фон для вмісту модального вікна */
+    margin: 15% auto; 
+    padding: 20px; /* Додаємо відступи всередині модального вікна */
+    border: 1px solid #888;
+    width: 80%; /* Встановлюємо ширину модального вікна */
+}
+
+.close {
+    color: #aaa; /* Колір кнопки закриття */
+    float: right; /* Вирівнюємо кнопку закриття праворуч */
+    font-size: 28px; /* Розмір шрифту кнопки закриття */
+    font-weight: bold; /* Жирний шрифт для кнопки закриття */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Змінюємо колір кнопки закриття при наведенні та фокусі */
+    text-decoration: none; /* Видаляємо підкреслення */
+    cursor: pointer; /* Змінюємо курсор на вказівник */
+}
+
+footer {
+    text-align: center; /* Центруємо текст у футері */
+    font-size: 20px;
+    background-color: #4CAF50; /* Зелений фон для футера */
+    color: white; 
+    flex-shrink: 0; 
+    opacity: 0.8;
+}
+
+
+.blur {
+    filter: blur(5px); /* Застосовуємо ефект блюру */
+}
+
+.message {
+    text-align: center; /* Центруємо текст у повідомленнях */
+    font-size: 1.2em; /* Встановлюємо розмір шрифту */
+    color: #ff0000; /* Червоний колір тексту */
+    padding: 1em; 
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ff0000; 
+    border-radius: 5px; 
+    margin: 1em; 
+    width: 100%; /* Займає весь рядок */
+    box-sizing: border-box; 
+}
+
+
+@media (max-width: 768px) {
+    .destinations-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 480px) {
+    .destinations-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .card {
+        padding: 0.5em; /* Зменшує відступи всередині карток */
+    }
+
+    .rating {
+        font-size: 1em; /* Зменшуємо розмір зірок на маленьких екранах */
+    }
+}
